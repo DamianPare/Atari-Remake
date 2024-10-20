@@ -9,34 +9,41 @@ public class Movement : MonoBehaviour
     private float timeToMove = 0.2f;
     private Animator animationController;
     private Rigidbody2D rb;
-    private int miningLevel = 0;
-    private int level;
+    private int bLevel;
+    private int mLevel;
     private GameObject block;
-
 
     private void Awake()
     {
+        
         animationController = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        block = collision.gameObject;
-        level = block.GetComponent<Block>().blockLevel;
-        if (miningLevel >= level)
+        if (collision.gameObject.layer == 6)
         {
-            Destroy(block);
+            block = collision.gameObject;
+            bLevel = block.GetComponent<Block>().blockLevel;
+            if (mLevel >= bLevel)
+            {
+                Destroy(block);
+            }
+
+            else
+            {
+                targetPos = origPos;
+            }
         }
 
-        else
-        {
-            targetPos = origPos;
-        }
+       
     }
 
     void Update()
     {
-        
+
+        mLevel = GameManager.instance.miningLevel;
+
         if (Input.GetKey(KeyCode.W) && !isMoving)
             StartCoroutine(MovePlayer(Vector3.up));
             
