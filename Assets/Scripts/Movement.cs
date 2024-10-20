@@ -15,7 +15,6 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
-        
         animationController = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -35,13 +34,10 @@ public class Movement : MonoBehaviour
                 targetPos = origPos;
             }
         }
-
-       
     }
 
     void Update()
     {
-
         mLevel = GameManager.instance.miningLevel;
 
         if (Input.GetKey(KeyCode.W) && !isMoving)
@@ -56,12 +52,10 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D) && !isMoving)
             StartCoroutine(MovePlayer(Vector3.right));
-
     }
 
     private IEnumerator MovePlayer(Vector3 direction)
     {
-
         animationController.SetFloat("MovementY", direction.y);
         animationController.SetFloat("MovementX", direction.x);
         isMoving = true;
