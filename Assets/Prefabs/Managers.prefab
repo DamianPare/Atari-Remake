@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4528226168657139018}
   - component: {fileID: 3353414168651332855}
+  - component: {fileID: 3027041570432215282}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -47,3 +48,39 @@ MonoBehaviour:
   miningLevel: 0
   money: 0
   health: 100
+--- !u!114 &3027041570432215282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2436252037624562753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0baf37a9b85d8b849a5608bfdc3d2dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Width: 5
+  Lenght: 3
+  Level1Prefabs:
+  - {fileID: 3553882764623984512, guid: 2405cae0165197d47a88e73ed8aae240, type: 3}
+  - {fileID: 1561441097929897320, guid: ee31c78afafec2d47be0cfe57b004032, type: 3}
+  - {fileID: 5405505290375616724, guid: f756457f0e3779b45a6d92d8b3caadd6, type: 3}
+  - {fileID: 2903929010670043335, guid: d2dbc58b61690724a9a468d20d13f8c7, type: 3}
+  - {fileID: 3570656736793040640, guid: 31ad7ab614fb59648b76df0c60e27177, type: 3}
+  Level2Prefabs:
+  - {fileID: 8139886556725429797, guid: 342150ea9e86e564697603e48bbec7b5, type: 3}
+  - {fileID: 2405785435803618983, guid: d01f0b73981c85d4781722221249ca1b, type: 3}
+  - {fileID: 2585828489293143347, guid: df06048c4bb467c4e9bf7e12626ddb90, type: 3}
+  - {fileID: 7805997723859103415, guid: fc39172a6ba967740a521027e19d84a8, type: 3}
+  - {fileID: 4706899809379887670, guid: e772909bbf2c1b64f96d2ee37e5acc64, type: 3}
+  Level3Prefabs:
+  - {fileID: 3898611856756792778, guid: 72d700d60c6f8e643a4db433fa045d1e, type: 3}
+  - {fileID: 4217576343741680451, guid: 769cf65d72139374a90f04611d42e00c, type: 3}
+  - {fileID: 3403840174334023540, guid: cd0ef0925381ea64799be16592cbc903, type: 3}
+  - {fileID: 5638111323605590251, guid: a790389b90d2a6c409912eb92fd20466, type: 3}
+  - {fileID: 6213966138084610887, guid: ea3c76ecc088d45408860443099859b2, type: 3}
+  TilesBuiltGrp: {fileID: 0}
+  TilesSizeX: 5
+  TilesSizeZ: 5
+  spawnPos: {x: 0, y: 0, z: 0}

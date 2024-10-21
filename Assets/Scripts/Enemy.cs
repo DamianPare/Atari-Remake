@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed = 1f;
     [SerializeField] private Transform playerPos;
     private CircleCollider2D rangeCollider;
+    private bool inPlayerRange;
 
     private void Start()
     {
@@ -18,7 +19,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-
+        if (inPlayerRange && Movement.instance.isAttacking)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -26,6 +30,14 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             ChasePlayer();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 9)
+        {
+            gameObject.SetActive(false);
         }
     }
 
