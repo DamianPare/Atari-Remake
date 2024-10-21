@@ -17,7 +17,7 @@ public class Shop : MonoBehaviour
         if (money > upgradeCost)
         {
             GameManager.instance.RemoveMoney(upgradeCost);
-            GameManager.instance.Upgrade();
+            GameManager.instance.UpgradeMining();
             upgradeCost *= 2;
             Debug.Log(upgradeCost);
         }
