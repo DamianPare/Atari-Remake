@@ -12,6 +12,14 @@ public class Movement : MonoBehaviour
     private int bLevel;
     private int mLevel;
     private GameObject block;
+    public static Movement instance;
+    public bool isAttacking;
+    private GameObject attackCollider;
+
+    private void Start()
+    {
+        instance = this;
+    }
 
     private void Awake()
     {
@@ -38,6 +46,11 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Attack();
+        }
+
         mLevel = GameManager.instance.miningLevel;
 
         if (Input.GetKey(KeyCode.W) && !isMoving)
@@ -74,5 +87,10 @@ public class Movement : MonoBehaviour
         transform.position = targetPos;
 
         isMoving = false;
+    }
+
+    private void Attack()
+    {
+        attackCollider.SetActive(true);
     }
 }
