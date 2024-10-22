@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour
     private Vector3 spawnPos;
     private bool chasing;
 
+    [SerializeField] private Sprite idle;
+    [SerializeField] private Sprite trigger;
+    [SerializeField] private SpriteRenderer ghostSprite;
+
     private void Awake()
     {
         spawnPos = transform.position;
@@ -31,6 +35,8 @@ public class Enemy : MonoBehaviour
         {
             ReturnToSpawn();
         }
+
+        ghostSprite.sprite = chasing ? trigger : idle;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
