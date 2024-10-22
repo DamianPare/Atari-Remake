@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private bool isMoving;
-    private Vector3 origPos, targetPos;
+    public Vector3 origPos, targetPos;
     public float timeToMove = 0.2f;
     private Animator animationController;
     private Rigidbody2D rb;
@@ -14,7 +14,8 @@ public class Movement : MonoBehaviour
     private GameObject block;
     public static Movement instance;
     public bool isAttacking;
-    private GameObject attackCollider;
+    public GameObject pickaxe;
+    public Vector3 moveDir;
 
     private void Start()
     {
@@ -46,7 +47,9 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+
+        if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
             Attack();
         }
@@ -56,7 +59,6 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && !isMoving)
             StartCoroutine(MovePlayer(Vector3.up));
             
-
         if (Input.GetKey(KeyCode.A) && !isMoving)
             StartCoroutine(MovePlayer(Vector3.left));
 
@@ -69,6 +71,7 @@ public class Movement : MonoBehaviour
 
     private IEnumerator MovePlayer(Vector3 direction)
     {
+        moveDir = direction;
         animationController.SetFloat("MovementY", direction.y);
         animationController.SetFloat("MovementX", direction.x);
         isMoving = true;
@@ -91,6 +94,6 @@ public class Movement : MonoBehaviour
 
     private void Attack()
     {
-        attackCollider.SetActive(true);
+        pickaxe.SetActive(true);
     }
 }

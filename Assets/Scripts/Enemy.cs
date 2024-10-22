@@ -9,7 +9,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed = 1f;
     [SerializeField] private Transform playerPos;
     private CircleCollider2D rangeCollider;
-    private bool inPlayerRange;
+    private Vector3 spawnPos;
+    private bool chasing;
+
+    private void Awake()
+    {
+        spawnPos = transform.position;
+        GameObject player = GameObject.Find("Drill");
+        playerPos = player.transform;
+    }
 
     private void Start()
     {
@@ -19,9 +27,9 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (inPlayerRange && Movement.instance.isAttacking)
+        if (!chasing && transform.position != spawnPos)
         {
-            gameObject.SetActive(false);
+            ReturnToSpawn();
         }
     }
 
@@ -33,14 +41,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 9)
-        {
-            gameObject.SetActive(false);
-        }
-    }
-
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 7)
@@ -49,14 +49,24 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        chasing = false;
+    }
+
     public void ChasePlayer()
     {
+        chasing = true;
         transform.position = Vector3.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
-        
     }
 
     public void AttackPlayer()
     {
         GameManager.instance.RemoveMoney(damage);
+    }
+
+    public void ReturnToSpawn()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, spawnPos, speed * Time.deltaTime);
     }
 }

@@ -14,17 +14,20 @@ public class Shop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (money > upgradeCost)
+        if (collision.gameObject.layer == 7)
         {
-            GameManager.instance.RemoveMoney(upgradeCost);
-            GameManager.instance.UpgradeMining();
-            upgradeCost *= 2;
-            Debug.Log(upgradeCost);
-        }
-        
-        else
-        {
-            Debug.Log("Not Enough Money");
+            if (money > upgradeCost)
+            {
+                GameManager.instance.RemoveMoney(upgradeCost);
+                GameManager.instance.UpgradeMining();
+                upgradeCost *= 2;
+                Debug.Log(upgradeCost);
+            }
+
+            else
+            {
+                Debug.Log("Not Enough Money");
+            }
         }
     }
 }
