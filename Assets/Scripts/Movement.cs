@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     private bool isMoving;
     private Vector3 origPos, targetPos;
-    private float timeToMove = 0.2f;
+    public float timeToMove = 0.2f;
     private Animator animationController;
     private Rigidbody2D rb;
     private int bLevel;
