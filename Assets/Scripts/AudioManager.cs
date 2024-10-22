@@ -6,15 +6,15 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource musicSource;
-    [SerializeField] private Sound blockDesSound;
-    [SerializeField] private Sound blockRestSound;
-    [SerializeField] private Sound throwPickaxe;
-    [SerializeField] private Sound upgrade;
-    [SerializeField] private Sound heal;
-    [SerializeField] private Sound hurt;
-    [SerializeField] private Sound enemyHit;
-    [SerializeField] private Sound death;
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource blockDesSound;
+    [SerializeField] private AudioSource blockRestSound;
+    [SerializeField] private AudioSource throwPickaxe;
+    [SerializeField] private AudioSource upgrade;
+    [SerializeField] private AudioSource heal;
+    [SerializeField] private AudioSource hurt;
+    [SerializeField] private AudioSource enemyHit;
+    [SerializeField] private AudioSource death;
     [SerializeField] private GameManager gameManagerListener;
     [SerializeField] private Attack attackListener;
 
@@ -33,38 +33,38 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void OnBlockDestroyed ( ) 
+    void OnBlockDestroyed() 
     {
-        blockDesSound.Source.Play();
+        blockDesSound.Play();
     }
     void OnBlockRestricted()
     {
-        blockRestSound.Source.Play();
+        blockRestSound.Play();
     }
 
     void OnAttacking()
     {
-        throwPickaxe.Source.Play();
+        throwPickaxe.Play();
     }
 
     void OnHeal()
     {
-        musicSource.pitch = 1;
-        heal.Source.Play();
+        music.pitch = 1;
+        heal.Play();
     }
 
     void OnDamaged()
     {
-        musicSource.pitch = musicSource.pitch - (Time.deltaTime * .01f);
+        music.pitch = music.pitch - (Time.deltaTime * .01f);
     }
 
     void OnUpgrade() 
     {
-        upgrade.Source.Play();
+        upgrade.Play();
     }
 
     void OnHitEnemy()
     {
-        enemyHit.Source.Play();
+        enemyHit.Play();
     }
 }

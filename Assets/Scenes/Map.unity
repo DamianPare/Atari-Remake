@@ -259,6 +259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80224228005397520, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
+      propertyPath: attackListener
+      value: 
+      objectReference: {fileID: 289892962}
     - target: {fileID: 2436252037624562753, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -338,13 +342,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2436252037624562753, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1797149451}
-    - targetCorrespondingSourceObject: {fileID: 2436252037624562753, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1797149452}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
 --- !u!1001 &130703182
 PrefabInstance:
@@ -921,7 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockLevel: 99999
-  value: 0
+  value: 10
 --- !u!61 &324107748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2176,7 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockLevel: 99999
-  value: 0
+  value: 10
 --- !u!61 &970201600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2687,7 +2685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockLevel: 10000
-  value: 1111111111
+  value: 10
 --- !u!1001 &1214595913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3099,17 +3097,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 975f3ca588576924c8963e5be37e2ab3, type: 3}
---- !u!114 &1327276584 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5383167174362498620, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-  m_PrefabInstance: {fileID: 1214595913}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ce878d9d08f744ca8e237c5ad33698, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1327276585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6580922552627488243, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
@@ -3841,207 +3828,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 975f3ca588576924c8963e5be37e2ab3, type: 3}
---- !u!1 &1797149447 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2436252037624562753, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-  m_PrefabInstance: {fileID: 84144806}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1797149449 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3353414168651332855, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-  m_PrefabInstance: {fileID: 84144806}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797149447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ff5a7f6e90e6242846dc37682917c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1797149451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797149447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b94ee31c9f8c15489c5e6eae72f5ef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 1797149452}
-  blockDesSound:
-    name: Digging
-    Clip: {fileID: 8300000, guid: 5ecdc45294a5f4b4f8d243e52279e2a6, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 85
-    Loop: 0
-    PlayOnAwake: 0
-  blockRestSound:
-    name: BlockRest
-    Clip: {fileID: 8300000, guid: 3aed935340a1b854ba519f1c03f327bc, type: 3}
-    Volume: 0
-    Pitch: 0.1
-    SpatialBlend: 0
-    Priority: 0
-    Loop: 0
-    PlayOnAwake: 0
-  throwPickaxe:
-    name: ThorwPickaxe
-    Clip: {fileID: 8300000, guid: de7faafcece7d1848956544c779c410f, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 85
-    Loop: 0
-    PlayOnAwake: 0
-  upgrade:
-    name: Upgrade
-    Clip: {fileID: 8300000, guid: b5c704c690006ed45a8713c505e38254, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 90
-    Loop: 0
-    PlayOnAwake: 0
-  heal:
-    name: Heal
-    Clip: {fileID: 8300000, guid: ca4c842c5989f3542b412e864a4c8d6f, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 100
-    Loop: 0
-    PlayOnAwake: 0
-  hurt:
-    name: Hit
-    Clip: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 150
-    Loop: 0
-    PlayOnAwake: 0
-  enemyHit:
-    name: Hit
-    Clip: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 90
-    Loop: 0
-    PlayOnAwake: 0
-  death:
-    name: Death
-    Clip: {fileID: 8300000, guid: 79d4c50ca08254e4ab55522affdbcb34, type: 3}
-    Volume: 1
-    Pitch: 1
-    SpatialBlend: 0
-    Priority: 120
-    Loop: 0
-    PlayOnAwake: 0
-  playerListener: {fileID: 1327276584}
-  gameManagerListener: {fileID: 1797149449}
-  attackListener: {fileID: 289892962}
---- !u!82 &1797149452
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797149447}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 37f2598c19927d343bea6d4fb932293b, type: 3}
-  m_Resource: {fileID: 8300000, guid: 37f2598c19927d343bea6d4fb932293b, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 80
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &1800103020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 798224557651581446, guid: 975f3ca588576924c8963e5be37e2ab3, type: 3}
@@ -4270,7 +4056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockLevel: 99999
-  value: 0
+  value: 10
 --- !u!61 &1881629293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4855,7 +4641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockLevel: 99999
-  value: 0
+  value: 10
 --- !u!61 &2051450050
 BoxCollider2D:
   m_ObjectHideFlags: 0
