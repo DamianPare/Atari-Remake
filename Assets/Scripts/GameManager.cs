@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public int miningLevel = 0;
     public int money;
-    public int maxHealth = 100;
-    private int health;
+    public float maxHealth = 100f;
+    private float health;
     public static GameManager instance;
+    public Text moneyCounter;
+    public Image healthBar;
 
     void Start()
     {
@@ -16,11 +20,20 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        healthBar.fillAmount = health / maxHealth;
+
+        if (health < 0)
+        {
+            GameOver();
+        }
+    }
+
     public void AddMoney(int moneyToAdd)
     {
         money += moneyToAdd;
-        Debug.Log(money);
-        Debug.Log(health);
+        moneyCounter.text = "$" + money;
     }
 
     public void RemoveMoney(int moneyToRemove)
@@ -39,14 +52,19 @@ public class GameManager : MonoBehaviour
         health *= 2;
     }
 
-    public void RemoveHealth(int damage)
+    public void RemoveHealth(float damage)
     {
-        health -= damage;
+        health -= damage * Time.deltaTime;
     }
 
     public void RestoreHealth()
     {
         health = maxHealth;
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 
