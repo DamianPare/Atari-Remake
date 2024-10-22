@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damage = 0.1f;
     [SerializeField] private float speed = 1f;
     [SerializeField] private Transform playerPos;
-    private CircleCollider2D rangeCollider;
     private Vector3 spawnPos;
     private bool chasing;
 
@@ -25,12 +24,21 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        rangeCollider = GetComponent<CircleCollider2D>();
-        rangeCollider.radius = range;
+
     }
 
     private void Update()
     {
+        if (Vector3.Distance(transform.position, playerPos.position) < range)
+        {
+            ChasePlayer();
+        }
+
+        if (Vector3.Distance(transform.position, playerPos.position) > range)
+        {
+            chasing = false;
+        }
+
         if (!chasing && transform.position != spawnPos)
         {
             ReturnToSpawn();
@@ -58,10 +66,6 @@ public class Enemy : MonoBehaviour
     }
     */
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        chasing = false;
-    }
 
     public void ChasePlayer()
     {
