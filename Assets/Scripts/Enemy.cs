@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float range = 1f;
-    [SerializeField] private int damage = 5;
+    [SerializeField] private float damage = 0.1f;
     [SerializeField] private float speed = 1f;
     [SerializeField] private Transform playerPos;
     private CircleCollider2D rangeCollider;
@@ -44,16 +44,19 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             ChasePlayer();
+            AttackPlayer();
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    /*
+    private void OnTriggerStay2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 7)
         {
             AttackPlayer();
         }
     }
+    */
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -68,7 +71,8 @@ public class Enemy : MonoBehaviour
 
     public void AttackPlayer()
     {
-        GameManager.instance.RemoveMoney(damage);
+        Debug.Log("damaging");
+        GameManager.instance.RemoveHealth(damage);
     }
 
     public void ReturnToSpawn()

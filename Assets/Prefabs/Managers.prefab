@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   miningLevel: 0
   money: 0
-  health: 100
+  maxHealth: 100
 --- !u!114 &3027041570432215282
 MonoBehaviour:
   m_ObjectHideFlags: 0
