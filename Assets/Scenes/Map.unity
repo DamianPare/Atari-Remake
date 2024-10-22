@@ -1704,92 +1704,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 975f3ca588576924c8963e5be37e2ab3, type: 3}
---- !u!1 &729035744
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 729035746}
-  - component: {fileID: 729035745}
-  m_Layer: 0
-  m_Name: Shop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &729035745
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729035744}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: bbdd11a47448cc74d8107a263820952b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &729035746
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729035744}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2000003, y: 0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &790157712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2782,14 +2696,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2942514573721717184, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4503597388406324430, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5383167174362498620, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
       propertyPath: pickaxe
       value: 
@@ -2838,25 +2744,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7704002160525629141, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7910658583775207213, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8188880613586592104, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8738270096078142761, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
       propertyPath: m_Name
       value: Drill
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866521218047855474, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3012,21 +2902,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3985638907969035937, guid: fe94456f39f02cb42be8acdaab532ca3, type: 3}
-      propertyPath: m_Name
-      value: MoneyOverlay
-      objectReference: {fileID: 0}
     - target: {fileID: 4339075610515456316, guid: fe94456f39f02cb42be8acdaab532ca3, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 5530490946482571131, guid: fe94456f39f02cb42be8acdaab532ca3, type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 8317039775371538604, guid: fe94456f39f02cb42be8acdaab532ca3, type: 3}
-      propertyPath: m_Name
-      value: MoneyTxt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3992,17 +3870,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1797149452}
-  blockDesSound: {fileID: 8300000, guid: 5ecdc45294a5f4b4f8d243e52279e2a6, type: 3}
-  blockRestSound: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
-  throwPickaxe: {fileID: 8300000, guid: de7faafcece7d1848956544c779c410f, type: 3}
-  upgrade: {fileID: 8300000, guid: c048a1aa4ab550f48aa808285ad36258, type: 3}
-  heal: {fileID: 8300000, guid: d6c7592464409cb4c98ebc703392478f, type: 3}
-  hurt: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
-  enemyHit: {fileID: 8300000, guid: 79d4c50ca08254e4ab55522affdbcb34, type: 3}
-  death: {fileID: 8300000, guid: 79d4c50ca08254e4ab55522affdbcb34, type: 3}
+  blockDesSound:
+    name: Digging
+    Clip: {fileID: 8300000, guid: 5ecdc45294a5f4b4f8d243e52279e2a6, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 85
+    Loop: 0
+    PlayOnAwake: 0
+  blockRestSound:
+    name: BlockRest
+    Clip: {fileID: 8300000, guid: 3aed935340a1b854ba519f1c03f327bc, type: 3}
+    Volume: 0
+    Pitch: 0.1
+    SpatialBlend: 0
+    Priority: 0
+    Loop: 0
+    PlayOnAwake: 0
+  throwPickaxe:
+    name: ThorwPickaxe
+    Clip: {fileID: 8300000, guid: de7faafcece7d1848956544c779c410f, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 85
+    Loop: 0
+    PlayOnAwake: 0
+  upgrade:
+    name: Upgrade
+    Clip: {fileID: 8300000, guid: b5c704c690006ed45a8713c505e38254, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 90
+    Loop: 0
+    PlayOnAwake: 0
+  heal:
+    name: Heal
+    Clip: {fileID: 8300000, guid: ca4c842c5989f3542b412e864a4c8d6f, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 100
+    Loop: 0
+    PlayOnAwake: 0
+  hurt:
+    name: Hit
+    Clip: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 150
+    Loop: 0
+    PlayOnAwake: 0
+  enemyHit:
+    name: Hit
+    Clip: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 90
+    Loop: 0
+    PlayOnAwake: 0
+  death:
+    name: Death
+    Clip: {fileID: 8300000, guid: 79d4c50ca08254e4ab55522affdbcb34, type: 3}
+    Volume: 1
+    Pitch: 1
+    SpatialBlend: 0
+    Priority: 120
+    Loop: 0
+    PlayOnAwake: 0
   playerListener: {fileID: 1327276584}
-  gameManager: {fileID: 1797149449}
-  attack: {fileID: 289892962}
+  gameManagerListener: {fileID: 1797149449}
+  attackListener: {fileID: 289892962}
 --- !u!82 &1797149452
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4022,7 +3964,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 80
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4968,10 +4910,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 212172526016581112, guid: 9970793550ce44f49aa0b8c32330d592, type: 3}
-      propertyPath: upgradeCost
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4621875472488501209, guid: 9970793550ce44f49aa0b8c32330d592, type: 3}
       propertyPath: m_Name
       value: ShopHolder
@@ -5328,7 +5266,6 @@ SceneRoots:
   - {fileID: 84144806}
   - {fileID: 1127447412}
   - {fileID: 906931178}
-  - {fileID: 729035746}
   - {fileID: 262732839}
   - {fileID: 2106477079}
   - {fileID: 1229731557}

@@ -7,51 +7,50 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource musicSource;
-    [SerializeField] private AudioClip blockDesSound;
-    [SerializeField] private AudioClip blockRestSound;
-    [SerializeField] private AudioClip throwPickaxe;
-    [SerializeField] private AudioClip upgrade;
-    [SerializeField] private AudioClip heal;
-    [SerializeField] private AudioClip hurt;
-    [SerializeField] private AudioClip enemyHit;
-    [SerializeField] private AudioClip death;
-    [SerializeField] private Movement playerListener;
-    [SerializeField] private GameManager gameManager;
-    [SerializeField] private Attack attack;
+    [SerializeField] private Sound blockDesSound;
+    [SerializeField] private Sound blockRestSound;
+    [SerializeField] private Sound throwPickaxe;
+    [SerializeField] private Sound upgrade;
+    [SerializeField] private Sound heal;
+    [SerializeField] private Sound hurt;
+    [SerializeField] private Sound enemyHit;
+    [SerializeField] private Sound death;
+    [SerializeField] private GameManager gameManagerListener;
+    [SerializeField] private Attack attackListener;
 
 
     private void Awake()
     {
-        if (playerListener != null)
+        if (attackListener != null)
         {
-            playerListener.blockDestroyed += OnBlockDestroyed;
-            playerListener.blockRestricted += OnBlockRestricted;
-            playerListener.attackPerformed += OnAttacking;
-            gameManager.healPerformed += OnHeal;
-            gameManager.damageRecieved += OnDamaged;
-            gameManager.upgradedLevel += OnUpgrade;
-            attack.hitEnemy += OnHitEnemy;
+            attackListener.blockDestroyed += OnBlockDestroyed;
+            attackListener.blockRestricted += OnBlockRestricted;
+            attackListener.attackPerformed += OnAttacking;
+            gameManagerListener.healPerformed += OnHeal;
+            gameManagerListener.damageRecieved += OnDamaged;
+            gameManagerListener.upgradedLevel += OnUpgrade;
+            attackListener.hitEnemy += OnHitEnemy;
         }
     }
 
     void OnBlockDestroyed ( ) 
     {
-        AudioSource.PlayClipAtPoint(blockDesSound, transform.position, 1f);
+        blockDesSound.Source.Play();
     }
     void OnBlockRestricted()
     {
-        AudioSource.PlayClipAtPoint(blockRestSound, transform.position, 1f);
+        blockRestSound.Source.Play();
     }
 
     void OnAttacking()
     {
-        AudioSource.PlayClipAtPoint(throwPickaxe, transform.position, 1f);
+        throwPickaxe.Source.Play();
     }
 
     void OnHeal()
     {
         musicSource.pitch = 1;
-        AudioSource.PlayClipAtPoint(heal, transform.position, 1f);
+        heal.Source.Play();
     }
 
     void OnDamaged()
@@ -61,11 +60,11 @@ public class AudioManager : MonoBehaviour
 
     void OnUpgrade() 
     {
-        AudioSource.PlayClipAtPoint(upgrade, transform.position, 1f);
+        upgrade.Source.Play();
     }
 
     void OnHitEnemy()
     {
-        AudioSource.PlayClipAtPoint(enemyHit, transform.position, 1f);
+        enemyHit.Source.Play();
     }
 }
