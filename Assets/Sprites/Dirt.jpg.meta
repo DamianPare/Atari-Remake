@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a267916b897fabd418e1b420a8088245
+guid: 199f19da18d4a24418bf9c5b61df7974
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: Dirt_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 71
-        width: 1046
-        height: 1046
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Dirt_0: -8275502208090371910
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

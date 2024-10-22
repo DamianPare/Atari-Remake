@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e7182e83146eb74f871d8b031a250a5
+guid: f817c36a66eb5694f834ab4e571bc9a1
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: Bedrock_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 76
-        width: 970
-        height: 926
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Bedrock_0: -2230326978415637320
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

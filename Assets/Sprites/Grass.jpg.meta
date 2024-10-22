@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b449e7aeec036b241a3c9401640ef7a9
+guid: 84cebf769a5ae804882bc5884716c808
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4407112351506077905
-    second: diamondOre_0
+      213: -1347532211411968617
+    second: Grass_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: diamondOre_0
+      name: Grass_0
       rect:
         serializedVersion: 2
-        x: 83
-        y: 83
-        width: 330
-        height: 334
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d891c47555392d30800000000000000
-      internalID: 4407112351506077905
+      spriteID: 79d946fd79a9c4de0800000000000000
+      internalID: -1347532211411968617
       vertices: []
       indices: 
       edges: []
