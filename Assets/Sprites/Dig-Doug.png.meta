@@ -133,6 +133,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -335,7 +348,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dig-Doug_0: -495018284734979834
+      Dig-Doug_1: 7074763291851976629
+      Dig-Doug_2: 3487027227639476053
+      Dig-Doug_3: 8613413922329198324
+      Dig-Doug_4: -9178356681224854804
+      Dig-Doug_5: 9131884839635110081
+      Dig-Doug_6: 554222487771557126
+      Dig-Doug_7: -4495607188504539616
+      Dig-Doug_8: 4037569694375926196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

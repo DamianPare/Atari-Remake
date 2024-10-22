@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,10 @@ public class Movement : MonoBehaviour
     public Vector3 moveDir;
     public int maxHeight;
 
+    public event Action blockDestroyed;
+    public event Action blockRestricted;
+    public event Action attackPerformed;
+
     private void Start()
     {
         instance = this;
@@ -37,11 +42,13 @@ public class Movement : MonoBehaviour
             if (mLevel >= bLevel)
             {
                 Destroy(block);
+                blockDestroyed?.Invoke();
             }
 
             else
             {
                 targetPos = origPos;
+                blockRestricted?.Invoke();
             }
         }
     }
@@ -51,6 +58,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
             Attack();
+            attackPerformed?.Invoke();
         }
 
         mLevel = GameManager.instance.miningLevel;
