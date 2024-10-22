@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1068334891897436733}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: P_Tile5Tier1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +64,10 @@ PrefabInstance:
     - target: {fileID: 2901897990329253322, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
       propertyPath: m_Name
       value: DirtGold
+      objectReference: {fileID: 0}
+    - target: {fileID: 2901897990329253322, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4914339406372247383, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1113,9 +1117,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1068334891897436733}
     m_Modifications:
+    - target: {fileID: 2677581480406228265, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4495000128526450482, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
       propertyPath: m_Name
       value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495000128526450482, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4939370305060659162, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1156,6 +1168,14 @@ PrefabInstance:
     - target: {fileID: 4939370305060659162, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770163882568403344, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8097870501381458928, guid: 4a778e4ac7b8fe7418d4bfa969a24b56, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

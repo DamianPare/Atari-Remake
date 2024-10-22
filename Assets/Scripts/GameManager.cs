@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Text moneyCounter;
     public Image healthBar;
+
+    public event Action healPerformed;
+    public event Action damageRecieved;
+    public event Action upgradedLevel;
 
     void Start()
     {
@@ -39,27 +44,32 @@ public class GameManager : MonoBehaviour
     public void RemoveMoney(int moneyToRemove)
     {
         money -= moneyToRemove;
+        moneyCounter.text = "$" + money;
         Debug.Log(money);
     }
 
     public void UpgradeMining()
     {
         miningLevel++;
+        upgradedLevel?.Invoke();
     }
 
     public void UpgradeHealth()
     {
         health *= 2;
+        healPerformed?.Invoke();
     }
 
     public void RemoveHealth(float damage)
     {
         health -= damage * Time.deltaTime;
+        damageRecieved?.Invoke();
     }
 
     public void RestoreHealth()
     {
         health = maxHealth;
+        healPerformed?.Invoke();
     }
 
     private void GameOver()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Attack : MonoBehaviour
@@ -11,6 +12,8 @@ public class Attack : MonoBehaviour
 
     private Vector3 targetPosition;
     private bool returning = false;
+
+    public event Action hitEnemy;
 
     private void Start()
     {
@@ -62,6 +65,7 @@ public class Attack : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
             Destroy(collision.gameObject);
+            hitEnemy?.Invoke();
         }
     }
 }

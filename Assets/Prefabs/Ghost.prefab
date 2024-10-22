@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8118372344546845988}
   - component: {fileID: 834320687430713292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5958275827758512079}
   - component: {fileID: 8097870501381458928}
   - component: {fileID: 6770163882568403344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
