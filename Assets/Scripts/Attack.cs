@@ -7,21 +7,17 @@ public class Attack : MonoBehaviour
 {
     public float distance = 10f;
     public float speed = 5f;
-    //public float spinSpeed;
     public Transform player;
 
     private Vector3 targetPosition;
     private bool returning = false;
+    public float spinSpeed = 1;
 
     public event Action hitEnemy;
 
-    private void Start()
-    {
-        
-    }
     void Update()
     {
-        //transform.Rotate(new Vector3(0, 0, 100) * Time.deltaTime * spinSpeed);
+        transform.Rotate(new Vector3(0, 0, 100) * Time.deltaTime * spinSpeed);
         
 
         if (!returning && targetPosition != Vector3.zero)
@@ -60,12 +56,19 @@ public class Attack : MonoBehaviour
         ThrowPickaxe();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision");
         if (collision.gameObject.layer == 8)
         {
             Destroy(collision.gameObject);
             hitEnemy?.Invoke();
+            returning = true;
+        }
+        else if(collision.gameObject.layer == 6)
+        {
+            Destroy(collision.gameObject);
+            returning = true;
         }
     }
 }
