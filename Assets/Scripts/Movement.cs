@@ -10,18 +10,12 @@ public class Movement : MonoBehaviour
     public float timeToMove = 0.2f;
     private Animator animationController;
     private Rigidbody2D rb;
-    private int bLevel;
-    private int mLevel;
-    private GameObject block;
+
     public static Movement instance;
     public bool isAttacking;
     public GameObject pickaxe;
     public Vector3 moveDir;
     public int maxHeight;
-
-    public event Action blockDestroyed;
-    public event Action blockRestricted;
-    public event Action attackPerformed;
 
     private void Start()
     {
@@ -34,35 +28,13 @@ public class Movement : MonoBehaviour
         animationController = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 6)
-        {
-            block = collision.gameObject;
-            bLevel = block.GetComponent<Block>().blockLevel;
-            if (mLevel >= bLevel)
-            {
-                Destroy(block);
-                blockDestroyed?.Invoke();
-            }
-
-            else
-            {
-                targetPos = origPos;
-                blockRestricted?.Invoke();
-            }
-        }
-    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
             Attack();
-            attackPerformed?.Invoke();
         }
-
-        mLevel = GameManager.instance.miningLevel;
 
         if (Input.GetKey(KeyCode.W) && !isMoving)
             StartCoroutine(MovePlayer(Vector3.up));

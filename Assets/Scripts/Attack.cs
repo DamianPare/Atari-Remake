@@ -13,18 +13,26 @@ public class Attack : MonoBehaviour
     private bool returning = false;
     public float spinSpeed = 1;
 
+    private int bLevel;
+    private int mLevel;
+    private GameObject block;
+
     public event Action hitEnemy;
+    public event Action blockDestroyed;
+    public event Action blockRestricted;
+    public event Action attackPerformed;
 
     private void Start()
     {
-        
+        mLevel = 0;
     }
 
     void Update()
     {
+        mLevel = GameManager.instance.miningLevel;
+
         transform.Rotate(new Vector3(0, 0, 100) * Time.deltaTime * spinSpeed);
         
-
         if (!returning && targetPosition != Vector3.zero)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
@@ -59,6 +67,7 @@ public class Attack : MonoBehaviour
     {
         transform.position = player.position;
         ThrowPickaxe();
+        attackPerformed?.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -70,10 +79,28 @@ public class Attack : MonoBehaviour
             hitEnemy?.Invoke();
             returning = true;
         }
-        else if(collision.gameObject.layer == 6)
+        else if (collision.gameObject.layer == 6)
         {
             Destroy(collision.gameObject);
             returning = true;
+
+            block = collision.gameObject;
+            bLevel = block.GetComponent<Block>().blockLevel;
+            if (mLevel > bLevel)
+            {
+                Destroy(block);
+                blockDestroyed?.Invoke();
+            }
+
+            else if (mLevel == bLevel)
+            {
+                bLevel--;
+            }
+
+            else
+            {
+                blockRestricted?.Invoke();
+            }
         }
     }
 }
