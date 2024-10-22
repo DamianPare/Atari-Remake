@@ -17,6 +17,10 @@ public class Movement : MonoBehaviour
     public Vector3 moveDir;
     public int maxHeight;
 
+    private int bLevel;
+    private int mLevel;
+    private GameObject block;
+
     private void Start()
     {
         instance = this;
@@ -27,6 +31,42 @@ public class Movement : MonoBehaviour
     {
         animationController = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            block = collision.gameObject;
+            bLevel = block.GetComponent<Block>().blockLevel;
+
+            if (mLevel > bLevel + 1)
+            {
+                Destroy(block);
+                //blockDestroyed?.Invoke();
+            }
+
+            else if (mLevel > bLevel)
+            {
+                Destroy(block);
+                //blockDestroyed?.Invoke();
+            }
+
+            else if (mLevel == bLevel)
+            {
+                targetPos = origPos;
+                block.GetComponent<Block>().blockLevel--;
+                Debug.Log("breaking");
+            }
+
+            else
+            {
+                targetPos = origPos;
+                //blockRestricted?.Invoke();
+            }
+        }
+
+
     }
 
     void Update()

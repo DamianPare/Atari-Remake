@@ -72,7 +72,6 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision");
         if (collision.gameObject.layer == 8)
         {
             Destroy(collision.gameObject);
@@ -81,24 +80,31 @@ public class Attack : MonoBehaviour
         }
         else if (collision.gameObject.layer == 6)
         {
-            Destroy(collision.gameObject);
-            returning = true;
-
             block = collision.gameObject;
             bLevel = block.GetComponent<Block>().blockLevel;
-            if (mLevel > bLevel)
+
+            if (mLevel > bLevel+1)
             {
                 Destroy(block);
+                blockDestroyed?.Invoke();
+            } 
+
+            else if (mLevel > bLevel)
+            {
+                Destroy(block);
+                returning = true;
                 blockDestroyed?.Invoke();
             }
 
             else if (mLevel == bLevel)
             {
-                bLevel--;
+                returning = true;
+                block.GetComponent<Block>().blockLevel--;
             }
 
             else
             {
+                returning = true;
                 blockRestricted?.Invoke();
             }
         }

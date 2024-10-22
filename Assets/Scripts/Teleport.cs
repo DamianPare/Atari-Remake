@@ -2,27 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiningUP : Shop
+public class Teleport : MonoBehaviour
 {
+    private Transform playerPos;
+    private Transform spawnPos;
     private bool inCollider;
+
+    private void Awake()
+    {
+        GameObject home = GameObject.Find("TeleporterHome");
+        spawnPos = home.transform;
+        GameObject player = GameObject.Find("Drill");
+        playerPos = player.transform;
+    }
+
     private void Update()
     {
-        money = GameManager.instance.money;
 
         if (inCollider && Input.GetKeyDown(KeyCode.W))
         {
-            if (money >= upgradeCost)
-            {
-                GameManager.instance.RemoveMoney(upgradeCost);
-                GameManager.instance.UpgradeMining();
-                upgradeCost *= 2;
-                Debug.Log("upgrade is now " + upgradeCost);
-            }
-
-            else
-            {
-                Debug.Log("Not Enough Money");
-            }
+            playerPos.transform.position = spawnPos.position;
         }
     }
 

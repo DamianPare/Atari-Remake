@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class HealthUP : Shop
 {
-    private void OnTriggerStay2D(Collider2D collision)
+    private bool inCollider;
+    private void Update()
     {
-        if (collision.gameObject.layer == 7 && Input.GetKeyDown(KeyCode.Space))
+        money = GameManager.instance.money;
+
+        if (inCollider && Input.GetKeyDown(KeyCode.W))
         {
-            if (money > upgradeCost)
+            if (money >= upgradeCost)
             {
                 GameManager.instance.RemoveMoney(upgradeCost);
                 GameManager.instance.UpgradeHealth();
@@ -19,7 +22,24 @@ public class HealthUP : Shop
             else
             {
                 Debug.Log("Not Enough Money");
+                Debug.Log("balance is " + money);
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            inCollider = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            inCollider = false;
         }
     }
 }
