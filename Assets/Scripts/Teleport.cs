@@ -12,8 +12,6 @@ public class Teleport : MonoBehaviour
     {
         GameObject home = GameObject.Find("TeleporterHome");
         spawnPos = home.transform;
-        GameObject player = GameObject.Find("Drill");
-        playerPos = player.transform;
     }
 
     private void Update()
@@ -21,7 +19,7 @@ public class Teleport : MonoBehaviour
 
         if (inCollider && Input.GetKeyDown(KeyCode.W))
         {
-            playerPos.transform.position = spawnPos.position;
+            Movement.instance.origPos = spawnPos.position;
         }
     }
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3908615145581106856}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: P_Tile4Tier1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ Transform:
   - {fileID: 1712172211939837668}
   - {fileID: 4860090486221007872}
   - {fileID: 668751709146904129}
+  - {fileID: 5887112499244323578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &41639862518074241
@@ -602,6 +603,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 798224557651581446, guid: 975f3ca588576924c8963e5be37e2ab3, type: 3}
   m_PrefabInstance: {fileID: 395668486380286228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1252383969408061964
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3908615145581106856}
+    m_Modifications:
+    - target: {fileID: 4526219371645987229, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657674876675738111, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+      propertyPath: m_Name
+      value: Teleporter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+--- !u!4 &5887112499244323578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4670907045146149110, guid: 6d1f36c658ee08541ab54598a5fd26fa, type: 3}
+  m_PrefabInstance: {fileID: 1252383969408061964}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2076448117383290082
 PrefabInstance:
@@ -1825,6 +1892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DirtOre (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2901897990329253322, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4914339406372247383, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
@@ -2106,6 +2177,10 @@ PrefabInstance:
     - target: {fileID: 2901897990329253322, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
       propertyPath: m_Name
       value: DirtOre
+      objectReference: {fileID: 0}
+    - target: {fileID: 2901897990329253322, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4914339406372247383, guid: 8d533c69ef5b64a43bc288b833779e3e, type: 3}
       propertyPath: m_LocalPosition.x
