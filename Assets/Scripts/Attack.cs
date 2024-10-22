@@ -15,6 +15,11 @@ public class Attack : MonoBehaviour
 
     public event Action hitEnemy;
 
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         transform.Rotate(new Vector3(0, 0, 100) * Time.deltaTime * spinSpeed);

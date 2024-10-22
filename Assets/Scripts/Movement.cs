@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         instance = this;
+        moveDir = Vector3.right;
     }
 
     private void Awake()
