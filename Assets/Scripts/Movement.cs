@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public bool isAttacking;
     public GameObject pickaxe;
     public Vector3 moveDir;
+    public int maxHeight;
 
     private void Start()
     {
@@ -47,8 +48,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        
-
         if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
             Attack();

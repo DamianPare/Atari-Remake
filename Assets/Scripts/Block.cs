@@ -6,7 +6,6 @@ public class Block : MonoBehaviour
 {
     public int blockLevel;
     public int value;
-    
 
     public void OnDestroy()
     {

@@ -6,11 +6,13 @@ public class GameManager : MonoBehaviour
 {
     public int miningLevel = 0;
     public int money;
-    public int health = 100;
+    public int maxHealth = 100;
+    private int health;
     public static GameManager instance;
 
     void Start()
     {
+        health = maxHealth;
         instance = this;
     }
 
@@ -32,9 +34,19 @@ public class GameManager : MonoBehaviour
         miningLevel++;
     }
 
+    public void UpgradeHealth()
+    {
+        health *= 2;
+    }
+
     public void RemoveHealth(int damage)
     {
         health -= damage;
+    }
+
+    public void RestoreHealth()
+    {
+        health = maxHealth;
     }
 }
 
