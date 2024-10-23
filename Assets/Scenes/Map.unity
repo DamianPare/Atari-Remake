@@ -2277,6 +2277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe
       objectReference: {fileID: 0}
+    - target: {fileID: 6108811846998569802, guid: 97da6ec8f5e1f5f43a90513c98c3d71e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2755,6 +2759,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3521579767748369831, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5383167174362498620, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
       propertyPath: pickaxe
       value: 
@@ -2806,6 +2814,14 @@ PrefabInstance:
     - target: {fileID: 8738270096078142761, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
       propertyPath: m_Name
       value: Drill
+      objectReference: {fileID: 0}
+    - target: {fileID: 8866521218047855474, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889215016382960527, guid: 40b345199ce64ed4e988bae535706ba3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4760,6 +4776,10 @@ PrefabInstance:
     - target: {fileID: 4621875472488501209, guid: 9970793550ce44f49aa0b8c32330d592, type: 3}
       propertyPath: m_Name
       value: ShopHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 4986035868556134370, guid: 9970793550ce44f49aa0b8c32330d592, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7386389588116455387, guid: 9970793550ce44f49aa0b8c32330d592, type: 3}
       propertyPath: m_LocalPosition.x

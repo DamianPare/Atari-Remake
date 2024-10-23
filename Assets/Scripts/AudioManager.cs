@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource death;
     [SerializeField] private GameManager gameManagerListener;
     [SerializeField] private Attack attackListener;
+    [SerializeField] private Movement movementListener;
 
 
     private void Awake()
@@ -30,6 +31,8 @@ public class AudioManager : MonoBehaviour
             gameManagerListener.damageRecieved += OnDamaged;
             gameManagerListener.upgradedLevel += OnUpgrade;
             attackListener.hitEnemy += OnHitEnemy;
+            movementListener.blockRestricted += OnBlockRestricted;
+            movementListener.blockDestroyed += OnBlockDestroyed;
         }
     }
 

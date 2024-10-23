@@ -21,6 +21,9 @@ public class Movement : MonoBehaviour
     private int mLevel;
     private GameObject block;
 
+    public event Action blockRestricted;
+    public event Action blockDestroyed;
+
     private void Start()
     {
         instance = this;
@@ -43,13 +46,13 @@ public class Movement : MonoBehaviour
             if (mLevel > bLevel + 1)
             {
                 Destroy(block);
-                //blockDestroyed?.Invoke();
+                blockDestroyed?.Invoke();
             }
 
             else if (mLevel > bLevel)
             {
                 Destroy(block);
-                //blockDestroyed?.Invoke();
+                blockDestroyed?.Invoke();
             }
 
             else if (mLevel == bLevel)
@@ -62,7 +65,7 @@ public class Movement : MonoBehaviour
             else
             {
                 targetPos = origPos;
-                //blockRestricted?.Invoke();
+                blockRestricted?.Invoke();
             }
         }
 
