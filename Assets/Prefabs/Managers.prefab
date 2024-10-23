@@ -42,8 +42,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
-  m_Resource: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -564,10 +564,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miningLevel: 0
-  money: 0
+  money: 2000
   maxHealth: 100
   moneyCounter: {fileID: 0}
   healthBar: {fileID: 0}
+  pickaxeHead: {fileID: 0}
+  helmet: {fileID: 0}
 --- !u!114 &3027041570432215282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +629,7 @@ MonoBehaviour:
   death: {fileID: 3302005411044004045}
   gameManagerListener: {fileID: 3353414168651332855}
   attackListener: {fileID: 0}
+  movementListener: {fileID: 0}
 --- !u!1 &2503872021378478315
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,8 +801,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
-  m_Resource: {fileID: 8300000, guid: 5be42635ff09a2444898663ff86f6f05, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

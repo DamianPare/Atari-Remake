@@ -14,10 +14,15 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Text moneyCounter;
     public Image healthBar;
+    public GameObject pickaxeHead;
+    public GameObject helmet;
 
     public event Action healPerformed;
     public event Action damageRecieved;
     public event Action upgradedLevel;
+
+    private SpriteRenderer pick;
+    private SpriteRenderer hat;
 
     void Start()
     {
@@ -51,12 +56,56 @@ public class GameManager : MonoBehaviour
     public void UpgradeMining()
     {
         miningLevel++;
+        pick = pickaxeHead.GetComponent<SpriteRenderer>();
+
+        if (miningLevel == 1)
+        {
+            pick.color = Color.yellow;
+        }
+        
+        else if (miningLevel == 2)
+        {
+            pick.color = Color.cyan;
+        }
+
+        else if (miningLevel == 3)
+        {
+            pick.color = Color.red;
+        }
+
+        else if (miningLevel == 4)
+        {
+            pick.color = Color.magenta;
+        }
+
         upgradedLevel?.Invoke();
     }
 
     public void UpgradeHealth()
     {
-        health *= 2;
+        maxHealth *= 2;
+        health = maxHealth;
+        hat = helmet.GetComponent<SpriteRenderer>();
+
+        if (maxHealth == 200)
+        {
+            hat.color = Color.yellow;
+        }
+
+        else if (maxHealth == 400)
+        {
+            hat.color = Color.cyan;
+        }
+
+        else if (maxHealth == 800)
+        {
+            hat.color = Color.red;
+        }
+
+        else if (maxHealth == 1600)
+        {
+            hat.color = Color.magenta;
+        }
         healPerformed?.Invoke();
     }
 
