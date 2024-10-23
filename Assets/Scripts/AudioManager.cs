@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
 
     void OnDamaged()
     {
-        music.pitch = music.pitch - (Time.deltaTime * .01f);
+        hurt.Play();
     }
 
     void OnUpgrade() 
