@@ -45,21 +45,20 @@ public class Movement : MonoBehaviour
 
             if (mLevel > bLevel + 1)
             {
-                Destroy(block);
+                block.SetActive(false);
                 blockDestroyed?.Invoke();
             }
 
             else if (mLevel > bLevel)
             {
-                Destroy(block);
+                block.SetActive(false);
                 blockDestroyed?.Invoke();
             }
 
             else if (mLevel == bLevel)
             {
                 targetPos = origPos;
-                block.GetComponent<Block>().blockLevel--;
-                Debug.Log("breaking");
+                block.GetComponent<Block>().DamageBlock();
             }
 
             else
@@ -74,6 +73,8 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        mLevel = GameManager.instance.miningLevel;
+
         if (Input.GetKeyDown(KeyCode.Space) && !isMoving)
         {
             Attack();

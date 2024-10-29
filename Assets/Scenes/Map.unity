@@ -272,41 +272,9 @@ PrefabInstance:
       value: Managers
       objectReference: {fileID: 0}
     - target: {fileID: 3027041570432215282, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: Width
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3027041570432215282, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: Lenght
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3027041570432215282, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: spawnPos.x
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3027041570432215282, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: spawnPos.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3027041570432215282, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: spawnPos.z
-      value: -16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3027041570432215282, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
       propertyPath: TilesBuiltGrp
       value: 
       objectReference: {fileID: 1127447411}
-    - target: {fileID: 3301791460604932403, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: Priority
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 3301791460604932403, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: 59221c498cc8da3479dbf3cadb397946, type: 3}
-    - target: {fileID: 3301791460604932403, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 59221c498cc8da3479dbf3cadb397946, type: 3}
     - target: {fileID: 3353414168651332855, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
       propertyPath: helmet
       value: 
@@ -323,22 +291,6 @@ PrefabInstance:
       propertyPath: moneyCounter
       value: 
       objectReference: {fileID: 1164094456}
-    - target: {fileID: 4253284327172393353, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4253284327172393353, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: f6b680fc99fbd4546ae2abf921e3fb93, type: 3}
-    - target: {fileID: 4253284327172393353, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: f6b680fc99fbd4546ae2abf921e3fb93, type: 3}
-    - target: {fileID: 4253284327172393353, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4528226168657139018, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7887607
@@ -378,10 +330,6 @@ PrefabInstance:
     - target: {fileID: 4528226168657139018, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8604191402825466913, guid: 1154d2e510ebd624f99e610c85b4dc4d, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

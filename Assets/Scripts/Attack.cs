@@ -85,13 +85,13 @@ public class Attack : MonoBehaviour
 
             if (mLevel > bLevel+1)
             {
-                Destroy(block);
+                block.SetActive(false);
                 blockDestroyed?.Invoke();
             } 
 
             else if (mLevel > bLevel)
             {
-                Destroy(block);
+                block.SetActive(false);
                 returning = true;
                 blockDestroyed?.Invoke();
             }
@@ -99,7 +99,7 @@ public class Attack : MonoBehaviour
             else if (mLevel == bLevel)
             {
                 returning = true;
-                block.GetComponent<Block>().blockLevel--;
+                block.GetComponent<Block>().DamageBlock();;
             }
 
             else

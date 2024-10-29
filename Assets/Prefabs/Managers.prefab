@@ -42,8 +42,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f6b680fc99fbd4546ae2abf921e3fb93, type: 3}
+  m_Resource: {fileID: 8300000, guid: f6b680fc99fbd4546ae2abf921e3fb93, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miningLevel: 0
-  money: 2000
+  money: 0
   maxHealth: 100
   moneyCounter: {fileID: 0}
   healthBar: {fileID: 0}
@@ -605,7 +605,7 @@ MonoBehaviour:
   TilesBuiltGrp: {fileID: 0}
   TilesSizeX: 5
   TilesSizeZ: 5
-  spawnPos: {x: 0, y: 0, z: 0}
+  spawnPos: {x: -10, y: 0, z: -16}
 --- !u!114 &80224228005397520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,8 +801,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 59221c498cc8da3479dbf3cadb397946, type: 3}
+  m_Resource: {fileID: 8300000, guid: 59221c498cc8da3479dbf3cadb397946, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -810,7 +810,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 60
+  Priority: 70
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1231,7 +1231,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 37f2598c19927d343bea6d4fb932293b, type: 3}
   m_Resource: {fileID: 8300000, guid: 37f2598c19927d343bea6d4fb932293b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.45
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
